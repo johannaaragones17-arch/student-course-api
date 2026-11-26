@@ -3,5 +3,5 @@ services:
     name: student-course-api-python
     runtime: python
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: python3 -m gunicorn app:app
+    buildCommand: pip install -r requirements.txt && which pip && pip --version && pip show gunicorn && which gunicorn
+    startCommand: gunicorn app:app
